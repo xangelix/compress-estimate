@@ -1,0 +1,33 @@
+[package]
+name = "compress-estimate"
+version = "0.1.0"
+edition = "2024"
+description = "Estimate compression ratio and speed of a data source without compressing it, via strategic sampling"
+license = "MIT OR Apache-2.0"
+keywords = ["compression", "zstd", "benchmark", "sampling", "estimation"]
+categories = [
+    "compression",
+    "development-tools",
+    "command-line-utilities",
+    "algorithms",
+    "simulation",
+]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+rayon = "1"
+serde_json = "1"
+thiserror = "2"
+zstd = "0.14"
+
+[dev-dependencies]
+zstd-sys = { version = "2", features = ["experimental"] }
+
+[[bin]]
+name = "compress-estimate"
+path = "src/bin/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
