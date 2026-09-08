@@ -61,7 +61,7 @@ $n_s$ chunks:
 
 $$
 \hat{f}_\ell = \sum_s w_s \bar{f}_s, \qquad
-\operatorname{SE}\big(\hat{f}_\ell\big)^2 = \sum_s w_s^2 \frac{\hat\sigma_s^2}{n_s}.
+\mathrm{SE}\big(\hat{f}_\ell\big)^2 = \sum_s w_s^2 \frac{\hat\sigma_s^2}{n_s}.
 $$
 
 Streams get a uniform sample instead: reservoir sampling over fixed-size
